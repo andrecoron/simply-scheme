@@ -46,7 +46,7 @@ Although we use these definitions from switching the DrRacket language level to 
 this library can also be easily used as a @litchar{#lang} language.
 
 For example, if your DrRacket language level has been set to
-@emph{Determine langauge from source}, then the following example should run without
+@emph{Determine language from source}, then the following example should run without
 any trouble:
 
 @codeblock|{

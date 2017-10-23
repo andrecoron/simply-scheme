@@ -19,6 +19,7 @@
 
 ;; Ignore these paths: they're here just for historical curiosity.
 (define compile-omit-paths (list "private" "make-distribution.rkt"))
+(define test-omit-paths (list "private"))
 
 ;; is this used any more? I think not:
 (define blurb '("Definitions to support programs written for Simply Scheme."))
