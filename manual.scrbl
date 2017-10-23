@@ -129,7 +129,7 @@ any trouble:
                @item{@racket[number?]}
                @item{@racket[odd?]}
                @item{@racket[quotient]}
-               @item{@racket[random]}
+               @;{@item{@racket[random]}}
                @item{@racket[remainder]}
                @item{@racket[round]}
                @item{@racket[sin]}
@@ -393,7 +393,7 @@ any trouble:
 
 @defidform[quotient]{Divide number, but round down to integer}
 
-@defidform[random]{Return a random number >= 0 and smaller than the argument}
+@;{@defidform[random]{Return a random number >= 0 and smaller than the argument}}
 
 @defidform[read]{Read an expression from the keyboard (or a file).}
 

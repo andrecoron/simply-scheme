@@ -49,7 +49,7 @@
 (define simply-scheme:open-output-file open-output-file)
 (define simply-scheme:positive? positive?)
 (define simply-scheme:quotient quotient)
-(define simply-scheme:random random)
+#;(define simply-scheme:random random)
 (define simply-scheme:read-line read-line)
 (define simply-scheme:read-string read-string)
 (define simply-scheme:remainder remainder)
@@ -125,7 +125,7 @@
           'done))
 
 
-(set! simply-scheme:random
+#;(set! simply-scheme:random
       (let-values (((*seed*) 1)
                    ((quotient) simply-scheme:quotient)
                    ((modulo) simply-scheme:modulo)
@@ -1383,7 +1383,7 @@
                ((real-odd?) simply-scheme:odd?)
                ((real-positive?) simply-scheme:positive?)
                ((real-quotient) simply-scheme:quotient)
-               ((real-random) simply-scheme:random)
+               #;((real-random) simply-scheme:random)
                ((real-remainder) simply-scheme:remainder)
                ((real-repeated) repeated)
                ((real-round) simply-scheme:round)
@@ -1448,7 +1448,7 @@
                 (set! simply-scheme:odd? (logoize-1 real-odd?))
                 (set! simply-scheme:positive? (logoize-1 real-positive?))
                 (set! simply-scheme:quotient (logoize-2 real-quotient))
-                (set! simply-scheme:random (logoize real-random))
+                #;(set! simply-scheme:random (logoize real-random))
                 (set! simply-scheme:remainder (logoize-2 real-remainder))
                 (set! simply-scheme:round (logoize-1 real-round))
                 (set! simply-scheme:sin (logoize-1 real-sin))
@@ -1503,7 +1503,7 @@
                         (set! simply-scheme:modulo real-modulo)
                         (set! simply-scheme:odd? real-odd?)
                         (set! simply-scheme:quotient real-quotient)
-                        (set! simply-scheme:random real-random)
+                        #;(set! simply-scheme:random real-random)
                         (set! simply-scheme:remainder real-remainder)
                         (set! simply-scheme:round real-round)
                         (set! simply-scheme:sin real-sin)
@@ -1565,7 +1565,7 @@
                      open-output-file
                      positive?
                      quotient
-                     random
+                     #;random
                      read-line
                      read-string
                      remainder
@@ -1668,7 +1668,7 @@
                      [simply-scheme:open-output-file open-output-file]
                      [simply-scheme:positive? positive?]
                      [simply-scheme:quotient quotient]
-                     [simply-scheme:random random]
+                     #;[simply-scheme:random random]
                      [simply-scheme:read-line read-line]
                      [simply-scheme:read-string read-string]
                      [simply-scheme:remainder remainder]
