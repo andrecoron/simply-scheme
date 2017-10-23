@@ -25,8 +25,7 @@
                 "Simply Scheme"))
         
         (define (get-module)
-          ;; FIXME: no idea if this is right:
-          'simply-scheme)
+          'simply-scheme/simply-scheme)
  
         (define (get-one-line-summary)
           "Based on the Simply Scheme textbook")
