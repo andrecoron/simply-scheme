@@ -1,11 +1,8 @@
 #lang scribble/manual
 
-@(require planet/scribble
-          planet/version
-          planet/resolver
-          scribble/eval
+@(require scribble/eval
           racket/sandbox
-          (for-label (this-package-in main)))
+          (for-label "main.rkt"))
 
 
 @(define my-evaluator
@@ -13,10 +10,13 @@
     (lambda ()
       (parameterize ([sandbox-output 'string]
                      [sandbox-error-output 'string])
-        (make-evaluator 
-         'racket/base
+        (make-module-evaluator '(module testing simply-scheme))
+        #;(make-evaluator 
+         simply-scheme
          #:requires
-         (list (resolve-planet-path `(planet , (this-package-version-symbol main)))))))))
+         (list )
+         #;(list (resolve-planet-path `(planet , (this-package-version-symbol main))))
+         )))))
 
 
 @title{Simply Scheme Support Definitions}
@@ -34,7 +34,8 @@ teaching language into DrRacket; the language is used in the textbook:
     http://www.cs.berkeley.edu/~bh/ss-toc2.html
 }
     
-The original source of these programs can be found from the FTP site at    @url{ftp://ftp.cs.berkeley.edu/pub/scheme}.  The definitions in this library 
+The original source of these programs can be found from the FTP site at
+@url{ftp://ftp.cs.berkeley.edu/pub/scheme}.  The definitions in this library 
 should correspond to those in
 @filepath{simply.scm} version 3.13 (8/11.98).
 
@@ -49,7 +50,7 @@ For example, if your DrRacket language level has been set to
 any trouble:
 
 @codeblock|{
-#lang planet dyoo/simply-scheme:2
+#lang simply-scheme
 (se (butlast (bf "this"))
     "world")
 }|   
@@ -223,7 +224,7 @@ any trouble:
 
 @section{Alphabetical Listing of Scheme Primitives}
     
-@defmodule/this-package[main]
+@defmodule[simply-scheme]{}
 
 
 @;@defidform[quote]{Quotation; abbreviated with @litchar{'}.}
@@ -463,7 +464,7 @@ operators:
 
 This can be enabled or disabled by using @racket[strings-are-numbers]:
 
-@declare-exporting/this-package[main]
+@declare-exporting[simply-scheme]
 @defidform[strings-are-numbers]{
 If bool is set to #t, strings will be treated as numbers, and the
 arithmetic operators will be overloaded to work with strings.  If bool

@@ -25,7 +25,8 @@
                 "Simply Scheme"))
         
         (define (get-module)
-          '(planet dyoo/simply-scheme:2/simply-scheme))
+          ;; FIXME: no idea if this is right:
+          'simply-scheme)
  
         (define (get-one-line-summary)
           "Based on the Simply Scheme textbook")
